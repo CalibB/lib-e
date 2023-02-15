@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <script src="./index.js" defer></script>
     <title>Lib-E</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Lib-E</h1>
+      <h1>Lib-E</h1>
     </header>
-</body>
+    <div class="library-section">
+      <aside class="sidebar">
+        <button>Add Book</button>
+        <form id="form">
+          <label for="title">
+            Title:
+            <input type="text" id="title" name="title" />
+          </label>
+          <label for="author">
+            Author:
+            <input type="text" id="author" name="author" />
+          </label>
+          <label for="pages">
+            Pages:
+            <input type="tel" id="pages" name="pages" />
+          </label>
+          <label for="description">
+            Description:
+            <input type="text" id="description" name="description" />
+          </label>
+          <label for="read">
+            Have read:
+            <input type="checkbox" id="read" name="read" />
+          </label>
+        </form>
+      </aside>
+      <main></main>
+    </div>
+    <footer>
+      <p>Created by <a href="https://github.com/CalibB">CalibB</a></p>
+    </footer>
+  </body>
 </html>
