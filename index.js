@@ -84,3 +84,23 @@ function displayBooks() {
 
     main.appendChild(book);
 };
+
+const backBtn = document.querySelector('.back__btn');
+const sidebarDiv = document.querySelector('.sidebar > div');
+const sidebarBtn = document.querySelector('.sidebar > div > button');
+
+form.style.display = 'none';
+backBtn.style.display = 'none';
+
+sidebarBtn.addEventListener('click', () => {
+    sidebarDiv.style.display = 'none'
+    form.style.display = 'flex';
+    backBtn.style.display = 'block';
+});
+
+
+backBtn.addEventListener('click', () => {
+    form.style.display = 'none';
+    sidebarDiv.style.display = 'flex';
+    backBtn.style.display = 'none';
+})
