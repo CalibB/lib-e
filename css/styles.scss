@@ -1,188 +1,201 @@
-$primary-color: #ECF2FF;
-$secondary-color: #E5D1FA;
-$tertiary-color: #D9D9D9;
-$btn-color: #FFF4D2;
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Ubuntu:wght@400;500;700&display=swap");
+
+$primary-color: #ecf2ff;
+$secondary-color: #e5d1fa;
+$tertiary-color: #d9d9d9;
+$btn-color: #fff4d2;
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    min-height: 100vh;
-    max-width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
+  font-family: "Ubuntu", sans-serif;
 }
 
 header {
-    padding: 1rem;
-    font-size: 1.5rem;
-    display: flex;
-    gap: .5rem;
-    align-items: center;
-    background-color: $primary-color;
+  padding: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: $primary-color;
 }
 header > img {
-    height: 83px;
-    width: 83px;
+  height: 83px;
+  width: 83px;
 }
 
 .library-section {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  min-height: 100vh;
 }
 
 .sidebar {
-    background-color: $secondary-color;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
 }
 .sidebar > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
 }
 .sidebar > div > h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 .sidebar > div > button {
-    padding: .5rem;
-    border-style: solid;
-    border-color: black;
-    border-radius: 10px;
-    background-color: $btn-color;
+  padding: 0.5rem;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  background-color: $btn-color;
 }
 .sidebar #form {
-    display: flex;
-    flex-direction: column;
-    gap: .8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 .sidebar #form > h1 {
-    text-align: center;
+  text-align: center;
 }
 .sidebar #form > .main__inputs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .sidebar #form > .main__inputs > label {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .sidebar #form > .main__inputs > label > input {
-    background-color: $btn-color;
-    border-style: solid;
-    border-color: #181823;
-    outline: none;
-    padding: .5rem;
+  background-color: $btn-color;
+  border-style: solid;
+  border-color: #181823;
+  outline: none;
+  padding: 0.5rem;
 }
 .sidebar #form > .actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 .sidebar #form > .actions > label > input,
 .book > div:nth-of-type(2) > input {
-    appearance: none;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: black;
-    height: 20px;
-    width: 50px;
-    outline: none;
-    position: relative;
-    background-color: red;
-    transition: all 0.5s ease-out;
+  appearance: none;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: black;
+  height: 20px;
+  width: 50px;
+  outline: none;
+  position: relative;
+  background-color: red;
+  transition: all 0.5s ease-out;
 }
 .sidebar #form > .actions > label > input::before,
 .book > div:nth-of-type(2) > input::before {
-    content: '';
-    height: 5px;
-    width: 5px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 100%;
-    position: absolute;
-    background-color: grey;
-    top: 2px;
-    left: 3px;
-    transition: all 0.5s ease-out;
+  content: "";
+  height: 5px;
+  width: 5px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 100%;
+  position: absolute;
+  background-color: grey;
+  top: 2px;
+  left: 3px;
+  transition: all 0.5s ease-out;
 }
 .sidebar #form > .actions > label {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .sidebar #form > .actions > label > input:checked,
 .book > div:nth-of-type(2) > input:checked {
-    background-color: green;
-    
+  background-color: green;
 }
 .sidebar #form > .actions > label > input:checked::before,
 .book > div:nth-of-type(2) > input:checked::before {
-    left: 30px;
+  left: 30px;
 }
 .sidebar #form > .actions > button,
 .back__btn,
 .book > div:nth-of-type(2) > button {
-    border-style: solid;
-    border-color: black;
-    border-radius: 10px;
-    padding: .5rem;
-    background-color: $btn-color;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  padding: 0.5rem;
+  background-color: $btn-color;
 }
 .sidebar #form > .actions > button:hover,
 .sidebar > div > button:hover,
 .back__btn:hover,
 .book > div:nth-of-type(2) > button:hover {
-    background-color: #181823;
-    color: $btn-color;
+  background-color: #181823;
+  color: $btn-color;
 }
 .back__btn {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: 250px;
-    gap: 1rem;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 250px;
+  gap: 1rem;
+  padding: 2rem;
 }
 
 .book {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    align-items: center;
-    padding: 1rem;
-    background-color: #181823;
-    color: #ECF2FF;
-    font-size: 1.2rem;
-    border-style: solid;
-    border-color: black;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 1rem;
+  background-color: #181823;
+  color: #ecf2ff;
+  font-size: 1.2rem;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
 }
 .book > img {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 }
 .book > div:nth-of-type(1),
 .book > div:nth-of-type(2) {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+footer {
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  background-color: $primary-color;
+}
+
+button {
+  font-family: inherit;
 }
