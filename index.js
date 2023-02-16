@@ -1,4 +1,4 @@
-let myLibrary = [];
+const myLibrary = [];
 
 function Book(title, author, pages, description, haveRead) {
   this.title = title;
@@ -17,9 +17,9 @@ form.addEventListener('submit', (e) => {
 });
 
 form.addEventListener('formdata', (e) => {
-    const formData = e.formData;
+    const formData  = e.formData;
 
-    let bookArr = [];
+    const bookArr = [];
 
     for (let value of formData.values()) {
         bookArr.push(value);
@@ -46,7 +46,7 @@ function displayBooks() {
     const read = document.createElement('p');
     const deleteBtn = document.createElement('button');
 
-    deleteBtn.textContent = 'Remove Book';
+    let count = 0;
 
     for (let value of myLibrary) {
         title.textContent = value.title;
@@ -54,7 +54,14 @@ function displayBooks() {
         pages.textContent = value.pages;
         descrip.textContent = value.description;
         read.textContent = value.read;
+        book.dataset.index = count++;
     };
+
+    deleteBtn.textContent = 'Remove Book';
+    deleteBtn.addEventListener('click', () => {
+        myLibrary.splice(book.dataset.index, 1);
+        main.removeChild(deleteBtn.parentNode)
+    });
 
     book.appendChild(title);
     book.appendChild(author);
@@ -62,8 +69,6 @@ function displayBooks() {
     book.appendChild(descrip);
     book.appendChild(read);
     book.appendChild(deleteBtn);
-
-    
 
     main.appendChild(book);
 };
