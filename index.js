@@ -43,8 +43,11 @@ function displayBooks() {
     const author = document.createElement('h3');
     const pages = document.createElement('p');
     const descrip = document.createElement('p');
-    const read = document.createElement('p');
     const deleteBtn = document.createElement('button');
+    const readInput = document.createElement('input');
+
+    readInput.setAttribute('type', 'checkbox');
+    readInput.setAttribute('name', 'haveRead');
 
     let count = 0;
 
@@ -53,9 +56,18 @@ function displayBooks() {
         author.textContent = value.author;
         pages.textContent = value.pages;
         descrip.textContent = value.description;
-        read.textContent = value.read;
         book.dataset.index = count++;
+        readInput.checked = value.haveRead;
     };
+
+    readInput.addEventListener('input', () => {
+        let position = readInput.parentNode.dataset.index;
+        if (readInput.checked === true) {
+            myLibrary[position].haveRead = true;
+        } else {
+            myLibrary[position].haveRead = false;
+        }
+    })
 
     deleteBtn.textContent = 'Remove Book';
     deleteBtn.addEventListener('click', () => {
@@ -67,7 +79,7 @@ function displayBooks() {
     book.appendChild(author);
     book.appendChild(pages);
     book.appendChild(descrip);
-    book.appendChild(read);
+    book.appendChild(readInput);
     book.appendChild(deleteBtn);
 
     main.appendChild(book);
