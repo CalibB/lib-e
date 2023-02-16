@@ -9,6 +9,11 @@ html {
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
 header {
   padding: 1rem;
   font-size: 1.5rem;
@@ -21,6 +26,139 @@ header {
 header > img {
   height: 83px;
   width: 83px;
+}
+
+.library-section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: #E5D1FA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.sidebar > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.sidebar > div > h1 {
+  font-size: 2rem;
+}
+
+.sidebar > div > button {
+  padding: 0.5rem;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  background-color: #FFF4D2;
+}
+
+.sidebar #form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.sidebar #form > h1 {
+  text-align: center;
+}
+
+.sidebar #form > .main__inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.sidebar #form > .main__inputs > label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar #form > .main__inputs > label > input {
+  background-color: #FFF4D2;
+  border-style: solid;
+  border-color: #181823;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.sidebar #form > .actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.sidebar #form > .actions > label > input {
+  appearance: none;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: black;
+  height: 20px;
+  width: 50px;
+  outline: none;
+  position: relative;
+  background-color: red;
+  transition: all 0.5s ease-out;
+}
+
+.sidebar #form > .actions > label > input::before {
+  content: "";
+  height: 5px;
+  width: 5px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 100%;
+  position: absolute;
+  background-color: grey;
+  top: 2px;
+  left: 3px;
+  transition: all 0.5s ease-out;
+}
+
+.sidebar #form > .actions > label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar #form > .actions > label > input:checked:checked {
+  background-color: green;
+}
+
+.sidebar #form > .actions > label > input:checked::before {
+  left: 30px;
+}
+
+.sidebar #form > .actions > button,
+.back__btn {
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  padding: 0.5rem;
+  background-color: #FFF4D2;
+}
+
+.sidebar #form > .actions > button:hover,
+.sidebar > div > button:hover,
+.back__btn:hover {
+  background-color: #181823;
+  color: #FFF4D2;
+}
+
+.back__btn {
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
