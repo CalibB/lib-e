@@ -15,30 +15,41 @@
     </header>
     <div class="library-section">
       <aside class="sidebar">
-        <button>Add Book</button>
+        <div>
+          <h1>
+            Welcome to your personal library archive!
+          </h1>
+          <button>Add Book</button>
+        </div>
         <form id="form">
-          <label for="title">
-            Title:
-            <input type="text" id="title" name="title" />
-          </label>
-          <label for="author">
-            Author:
-            <input type="text" id="author" name="author" />
-          </label>
-          <label for="pages">
-            Pages:
-            <input type="tel" id="pages" name="pages" />
-          </label>
-          <label for="description">
-            Description:
-            <input type="text" id="description" name="description" />
-          </label>
-          <label for="read">
-            Have read:
-            <input type="checkbox" id="read" name="read" value="true" />
-          </label>
-          <button type="submit">Add Book</button>
+          <h1>Enter in your book details</h1>
+          <div class="main__inputs">
+            <label for="title">
+              Title:
+              <input type="text" id="title" name="title" />
+            </label>
+            <label for="author">
+              Author:
+              <input type="text" id="author" name="author" />
+            </label>
+            <label for="pages">
+              Pages:
+              <input type="tel" id="pages" name="pages" />
+            </label>
+            <label for="description">
+              Description:
+              <input type="text" id="description" name="description" />
+            </label>
+          </div>
+          <div class="actions">
+            <label for="read">
+              Have read:
+              <input type="checkbox" id="read" name="read" value="true" />
+            </label>
+            <button type="submit">Add Book</button>
+          </div>
         </form>
+        <button class="back__btn">Back</button>
       </aside>
       <main></main>
     </div>
