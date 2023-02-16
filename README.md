@@ -10,7 +10,7 @@
     A simple project showcasing use of objects.
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://calibb.github.io/lib-e/">View Demo</a>
   </p>
 </div>
 
