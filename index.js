@@ -46,6 +46,13 @@ function displayBooks() {
     const deleteBtn = document.createElement('button');
     const readInput = document.createElement('input');
 
+    const image = document.createElement('img');
+    image.setAttribute('src', './assets/book-open-variant.svg');
+    image.setAttribute('alt', 'book icon');
+
+    const div1 = document.createElement('div');
+    const div2 = document.createElement('div');
+
     readInput.setAttribute('type', 'checkbox');
     readInput.setAttribute('name', 'haveRead');
 
@@ -53,8 +60,8 @@ function displayBooks() {
 
     for (let value of myLibrary) {
         title.textContent = value.title;
-        author.textContent = value.author;
-        pages.textContent = value.pages;
+        author.textContent = `By ${value.author}`;
+        pages.textContent = `${value.pages} pages`;
         descrip.textContent = value.description;
         book.dataset.index = count++;
         readInput.checked = value.haveRead;
@@ -72,15 +79,19 @@ function displayBooks() {
     deleteBtn.textContent = 'Remove Book';
     deleteBtn.addEventListener('click', () => {
         myLibrary.splice(book.dataset.index, 1);
-        main.removeChild(deleteBtn.parentNode)
+        main.removeChild(div2.parentNode)
     });
 
-    book.appendChild(title);
-    book.appendChild(author);
+    book.appendChild(image);
+    book.appendChild(div1);
+    div1.appendChild(title);
+    div1.appendChild(author);
     book.appendChild(pages);
     book.appendChild(descrip);
-    book.appendChild(readInput);
-    book.appendChild(deleteBtn);
+    book.appendChild(div2);
+    div2.appendChild(readInput);
+    div2.appendChild(deleteBtn);
+    book.classList.add('book');
 
     main.appendChild(book);
 };
