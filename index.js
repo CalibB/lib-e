@@ -1,11 +1,13 @@
 const myLibrary = [];
 
-function Book(title, author, pages, description, haveRead) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.description = description;
-  this.haveRead = haveRead;
+class Book {
+  constructor(title, author, pages, description, haveRead) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.description = description;
+    this.haveRead = haveRead;
+  }
 }
 
 // Get form values to be transferred into array
